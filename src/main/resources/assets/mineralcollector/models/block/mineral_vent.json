@@ -1,0 +1,9 @@
+{
+    "parent": "block/cube_column",
+    "textures": 
+    {
+        "particle": "mineralcollector:block/mineral_vent",
+        "end": "mineralcollector:block/mineral_vent",
+        "side": "block/stone"
+    }
+}

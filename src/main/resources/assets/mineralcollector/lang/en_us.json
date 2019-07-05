@@ -1,0 +1,6 @@
+{
+	"block.mineralcollector.mineral_collector": "Mineral Collector",
+	"block.mineralcollector.mineral_vent": "Mineral Vent",
+	"block.mineralcollector.mineral_bubble_column": "Mineral Bubble Column",
+	"itemGroup.mineralcollector.general" = "Mineral Collector"
+}

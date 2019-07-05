@@ -1,0 +1,10 @@
+{
+	"variants":
+	{
+	"": 
+		[
+			{"model": "mineralcollector:block/mineral_vent"},
+			{"model": "mineralcollector:block/mineral_vent", "y": 90}
+		]
+	}
+}

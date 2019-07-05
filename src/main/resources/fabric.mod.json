@@ -3,27 +3,27 @@
   "id": "modid",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Mineral Collector",
+  "description": "Collect minerals from ocean sea vents!",
   "authors": [
-    "Me!"
+    "Cuplex"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/Cuplex17/mineralcollector"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/mineralcollector/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "net.cuplex.mineralcollector.MineralCollector"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "mineralcollector.mixins.json"
   ],
 
   "depends": {
