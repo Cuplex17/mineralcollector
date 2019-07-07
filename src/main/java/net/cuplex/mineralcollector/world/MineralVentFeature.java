@@ -1,18 +1,26 @@
 package net.cuplex.mineralcollector.world;
 
+import com.mojang.datafixers.Dynamic;
 import net.cuplex.mineralcollector.MineralCollector;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.structure.StructureManager;
 import net.minecraft.structure.StructureStart;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableIntBoundingBox;
+import net.minecraft.world.Heightmap;
+import net.minecraft.world.IWorld;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.chunk.ChunkGenerator;
+import net.minecraft.world.gen.chunk.ChunkGeneratorConfig;
 import net.minecraft.world.gen.feature.AbstractTempleFeature;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.StructureFeature;
+import net.minecraft.world.gen.feature.WildCropFeature;
 
 import java.util.Random;
+import java.util.function.Function;
 
 public class MineralVentFeature extends AbstractTempleFeature<DefaultFeatureConfig>
 {
@@ -21,6 +29,7 @@ public class MineralVentFeature extends AbstractTempleFeature<DefaultFeatureConf
         super(DefaultFeatureConfig::deserialize);
     }
 
+    @Override
     protected int getSeedModifier()
     {
         return 0;
@@ -35,7 +44,7 @@ public class MineralVentFeature extends AbstractTempleFeature<DefaultFeatureConf
     @Override
     public String getName()
     {
-        return "mineral_vent_feature";
+        return "mineral_vent";
     }
 
     public int getRadius()
@@ -70,4 +79,4 @@ public class MineralVentFeature extends AbstractTempleFeature<DefaultFeatureConf
             this.setBoundingBoxFromChildren();;
         }
     }
-}
+ }

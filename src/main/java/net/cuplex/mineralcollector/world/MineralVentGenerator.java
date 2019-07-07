@@ -27,14 +27,14 @@ public class MineralVentGenerator
     }
 
     public static class Piece extends SimpleStructurePiece {
-        private final BlockRotation rotation;
+        //private final BlockRotation rotation;
         private final Identifier identifier;
 
         public Piece(StructureManager structureManager_1, CompoundTag compoundTag_1) {
             super(MineralCollector.MINERAL_VENT_PIECE_TYPE, compoundTag_1);
 
             this.identifier = new Identifier(compoundTag_1.getString("Template"));
-            this.rotation = BlockRotation.valueOf(compoundTag_1.getString("Rot"));
+            //this.rotation = BlockRotation.valueOf(compoundTag_1.getString("Rot"));
 
             this.setStructureData(structureManager_1);
         }
@@ -42,16 +42,19 @@ public class MineralVentGenerator
         public Piece(StructureManager structureManager, Identifier identifier, BlockPos pos, BlockRotation rotation) {
             super(MineralCollector.MINERAL_VENT_PIECE_TYPE, 0);
 
-            this.rotation = rotation;
+            //this.rotation = rotation;
             this.identifier = identifier;
             this.pos = pos;
 
             this.setStructureData(structureManager);
         }
 
-        public void setStructureData(StructureManager structureManager) {
+        public void setStructureData(StructureManager structureManager)
+        {
             Structure structure_1 = structureManager.getStructureOrBlank(this.identifier);
-            StructurePlacementData structurePlacementData_1 = (new StructurePlacementData()).setRotation(this.rotation).setMirrored(BlockMirror.NONE).setPosition(pos).addProcessor(BlockIgnoreStructureProcessor.IGNORE_STRUCTURE_BLOCKS);
+            StructurePlacementData structurePlacementData_1 = (new StructurePlacementData()).setMirrored(BlockMirror.NONE).setPosition(pos).addProcessor(BlockIgnoreStructureProcessor.IGNORE_STRUCTURE_BLOCKS);
+            //Rotation didn't work
+            //StructurePlacementData structurePlacementData_1 = (new StructurePlacementData()).setRotation(this.rotation).setMirrored(BlockMirror.NONE).setPosition(pos).addProcessor(BlockIgnoreStructureProcessor.IGNORE_STRUCTURE_BLOCKS);
             this.setStructureData(structure_1, this.pos, structurePlacementData_1);
         }
 

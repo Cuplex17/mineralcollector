@@ -21,11 +21,15 @@ import net.minecraft.structure.StructurePieceType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.Biomes;
+import net.minecraft.world.biome.OceanBiome;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.decorator.ChanceDecoratorConfig;
+import net.minecraft.world.gen.decorator.CountDecoratorConfig;
 import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.StructureFeature;
 
 public class MineralCollector implements ModInitializer
@@ -57,6 +61,7 @@ public class MineralCollector implements ModInitializer
             .build();
 
     //New Structures
+
     public static final StructurePieceType MINERAL_VENT_PIECE_TYPE = Registry.register(Registry.STRUCTURE_PIECE, "mineral_vent_piece", MineralVentGenerator.Piece::new);
     public static final StructureFeature<DefaultFeatureConfig> MINERAL_VENT_FEATURE = Registry.register(Registry.FEATURE, "mineral_vent_feature", new MineralVentFeature());
     public static final StructureFeature<?> MINERAL_VENT = Registry.register(Registry.STRUCTURE_FEATURE, "mineral_vent", MINERAL_VENT_FEATURE);
