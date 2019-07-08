@@ -92,7 +92,7 @@ public class MineralCollector implements ModInitializer
             if(biome.getCategory() == Biome.Category.OCEAN)
             {
                 biome.addStructureFeature(MINERAL_VENT_FEATURE, new DefaultFeatureConfig());
-                biome.addFeature(GenerationStep.Feature.SURFACE_STRUCTURES, Biome.configureFeature(MINERAL_VENT_FEATURE, new DefaultFeatureConfig(), Decorator.CHANCE_PASSTHROUGH, new ChanceDecoratorConfig(2)));
+                biome.addFeature(GenerationStep.Feature.SURFACE_STRUCTURES, Biome.configureFeature(MINERAL_VENT_FEATURE, new DefaultFeatureConfig(), Decorator.CHANCE_PASSTHROUGH, new ChanceDecoratorConfig(8)));
             }
         }
 
