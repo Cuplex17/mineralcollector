@@ -18,6 +18,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.structure.StructurePieceType;
+import net.minecraft.tag.Tag;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
@@ -89,7 +90,7 @@ public class MineralCollector implements ModInitializer
 
         for(Biome biome : Registry.BIOME)
         {
-            if(biome.getCategory() == Biome.Category.OCEAN)
+            if(biome == Biomes.OCEAN || biome == Biomes.DEEP_COLD_OCEAN || biome == Biomes.DEEP_LUKEWARM_OCEAN || biome == Biomes.DEEP_OCEAN || biome == Biomes.DEEP_WARM_OCEAN || biome == Biomes.DEEP_FROZEN_OCEAN)
             {
                 biome.addStructureFeature(MINERAL_VENT_FEATURE, new DefaultFeatureConfig());
                 biome.addFeature(GenerationStep.Feature.SURFACE_STRUCTURES, Biome.configureFeature(MINERAL_VENT_FEATURE, new DefaultFeatureConfig(), Decorator.CHANCE_PASSTHROUGH, new ChanceDecoratorConfig(8)));
