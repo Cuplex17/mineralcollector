@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "mineralcollector",
   "version": "${version}",
 
   "name": "Mineral Collector",
